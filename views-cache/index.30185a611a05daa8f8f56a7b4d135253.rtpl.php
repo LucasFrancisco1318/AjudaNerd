@@ -1,0 +1,169 @@
+<?php if(!class_exists('Rain\Tpl')){exit;}?><div class="content-wrapper">
+    <!-- Content Header (Page header) -->
+    <section class="content-header">
+        <h1>
+            Página Principal
+        </h1>
+        <ol class="breadcrumb">
+            <li><a href="/admin"><i class="fas fa-tachometer-alt"></i> Home</a></li>
+            <li><a href="#">Layout</a></li>
+            <li class="active">Fixed</li>
+        </ol>
+    </section>
+
+    <section class="content">
+
+        <div class="row">
+            <div class="col-md-3 col-sm-6 col-xs-12">
+                <div class="info-box">
+                    <span class="info-box-icon bg-aqua"><i class="fas fa-users"></i></span>
+
+                    <div class="info-box-content">
+                        <span>Usuários Online</span>
+                        <span class="info-box-number">150</span>
+                        <a href="#" class="small-box-footer">Mais Informaçoes <i class="fa fa-arrow-circle-right"></i></a>
+                    </div>
+                    <!-- /.info-box-content -->
+                </div>
+                <!-- /.info-box -->
+            </div>
+            <!-- /.col -->
+            <div class="col-md-3 col-sm-6 col-xs-12">
+                <div class="info-box">
+                    <span class="info-box-icon bg-red"><i class="fas fa-user-plus"></i></span>
+
+                    <div class="info-box-content">
+                        <span>Usuários Cadastrados</span>
+                        <span class="info-box-number"><?php echo getUsersTotal(); ?></span>
+                        <a href="#" class="small-box-footer">Mais Informaçoes <i class="fa fa-arrow-circle-right"></i></a>
+                    </div>
+                    <!-- /.info-box-content -->
+                </div>
+                <!-- /.info-box -->
+            </div>
+
+            <div class="col-md-3 col-sm-6 col-xs-12">
+                <div class="info-box">
+                    <span class="info-box-icon bg-red"><i class="fas fa-user-tag"></i></span>
+
+                    <div class="info-box-content">
+                        <span>Usuários PRO</span>
+                        <span class="info-box-number">41,410</span>
+                        <a href="#" class="small-box-footer">Mais Informaçoes <i class="fa fa-arrow-circle-right"></i></a>
+                    </div>
+                    <!-- /.info-box-content -->
+                </div>
+                <!-- /.info-box -->
+            </div>
+
+            <div class="clearfix visible-sm-block"></div>
+
+            <div class="col-md-3 col-sm-6 col-xs-12">
+                <div class="info-box">
+                    <span class="info-box-icon bg-green"><i class="fas fa-download"></i></span>
+
+                    <div class="info-box-content">
+                        <span>Livros Baixados/Semana</span>
+                        <span class="info-box-number">760</span>
+                        <a href="#" class="small-box-footer">Mais Informaçoes <i class="fa fa-arrow-circle-right"></i></a>
+                    </div>
+                    <!-- /.info-box-content -->
+                </div>
+                <!-- /.info-box -->
+            </div>
+            <!-- /.col -->
+            <div class="col-md-3 col-sm-6 col-xs-12">
+                <div class="info-box">
+                    <span class="info-box-icon bg-yellow"><i class="fas fa-upload"></i></span>
+
+                    <div class="info-box-content">
+                        <span>Livros Salvos/Semana</span>
+                        <span class="info-box-number">2,000</span>
+                        <a href="#" class="small-box-footer">Mais Informaçoes <i class="fa fa-arrow-circle-right"></i></a>
+                    </div>
+                    <!-- /.info-box-content -->
+                </div>
+                <!-- /.info-box -->
+            </div>
+            <!-- /.col -->
+
+            <div class="col-md-3 col-sm-6 col-xs-12">
+                <div class="info-box">
+                    <span class="info-box-icon bg-gray"><i class="fab fa-forumbee"></i></span>
+
+                    <div class="info-box-content">
+                        <span>Fóruns Criados</span>
+                        <span class="info-box-number">41,410</span>
+                        <a href="#" class="small-box-footer">Mais Informaçoes <i class="fa fa-arrow-circle-right"></i></a>
+                    </div>
+                    <!-- /.info-box-content -->
+                </div>
+                <!-- /.info-box -->
+            </div>
+
+            <div class="col-md-3 col-sm-6 col-xs-12">
+                <div class="info-box">
+                    <span class="info-box-icon bg-fuchsia-active"><i class="fab fa-forumbee"></i></span>
+
+                    <div class="info-box-content">
+                        <span>Fóruns Abertos</span>
+                        <span class="info-box-number">41,410</span>
+                        <a href="#" class="small-box-footer">Mais Informaçoes <i class="fa fa-arrow-circle-right"></i></a>
+                    </div>
+                    <!-- /.info-box-content -->
+                </div>
+                <!-- /.info-box -->
+            </div>
+
+            <div class="col-md-3 col-sm-6 col-xs-12">
+                <div class="info-box">
+                    <span class="info-box-icon bg-lime"><i class="fab fa-forumbee"></i></span>
+
+                    <div class="info-box-content">
+                        <span>Fóruns Fechados</span>
+                        <span class="info-box-number">41,410</span>
+                        <a href="#" class="small-box-footer">Mais Informaçoes <i class="fa fa-arrow-circle-right"></i></a>
+                    </div>
+                    <!-- /.info-box-content -->
+                </div>
+                <!-- /.info-box -->
+            </div>
+
+        </div>
+
+        <div class="row">
+            <div class="col-xs-12">
+                <!-- interactive chart -->
+                <div class="box box-primary">
+                    <div class="box-header with-border">
+                        <i class="fa fa-bar-chart-o"></i>
+
+                        <h3 class="box-title">Usuários Online no Momento</h3>
+
+                        <div class="box-tools pull-right">
+                            <div class="btn-group" id="realtime" data-toggle="btn-toggle">
+                                <button type="button" class="btn btn-default btn-xs active" data-toggle="on">On</button>
+                                <button type="button" class="btn btn-default btn-xs" data-toggle="off">Off</button>
+                                <button type="button" class="btn btn-default btn-xs"><i class="fa fa-refresh"></i></button>
+                                <button type="button" class="btn btn-default btn-xs" data-widget="collapse"><i class="fa fa-minus"></i></button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="box-body">
+                        <div id="interactive" style="height: 300px;"></div>
+                    </div>
+                    <!-- /.box-body-->
+                </div>
+                <!-- /.box -->
+
+            </div>
+            <!-- /.col -->
+        </div>
+        <!-- /.row -->
+
+    </section>
+
+    </section>
+    <!-- /.content -->
+</div>
+<!-- /.content-wrapper -->
